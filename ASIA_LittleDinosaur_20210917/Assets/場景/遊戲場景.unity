@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Follow: {fileID: 434848999}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 4.5
+    OrthographicSize: 3.54
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -561,13 +561,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
-  jump: 650
+  jump: 680
   checkGroundRadius: 0.2
   checkGroundOffset: {x: 0, y: -0.65, z: 0}
   keyJump: 32
   canJumpLayer:
     serializedVersion: 2
     m_Bits: 8
+  parameterWalk: "\u958B\u95DC\u8D70\u8DEF"
+  parameterJump: "\u958B\u95DC\u8DF3\u8E8D"
   isGrounded: 0
 --- !u!1 &435405574
 GameObject:
@@ -6905,7 +6907,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 3.54
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
