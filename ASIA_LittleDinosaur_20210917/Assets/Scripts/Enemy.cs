@@ -81,6 +81,10 @@ public class Enemy : MonoBehaviour
 
         rig.velocity = transform.TransformDirection(new Vector2(-speed, rig.velocity.y));
         ani.SetBool(parameterWalk, true);
+
+        // 距離 = 三維向量.距離(A點，B點)
+        float distance = Vector3.Distance(target.position, transform.position);
+        print("與目標的距離：" + distance);
     }
     #endregion
 }
