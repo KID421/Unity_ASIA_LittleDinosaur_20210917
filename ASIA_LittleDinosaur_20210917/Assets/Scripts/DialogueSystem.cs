@@ -12,7 +12,8 @@ public class DialogueSystem : MonoBehaviour
     public float interval = 0.3f;
     [Header("畫布對話系統")]
     public GameObject goDialogue;
-    [Header("對話內容")]
+    [Header("對話名稱與內容")]
+    public Text textName;
     public Text textContent;
     [Header("對話完成圖示")]
     public GameObject goTip;
@@ -28,13 +29,14 @@ public class DialogueSystem : MonoBehaviour
     /// 打字效果
     /// </summary>
     /// <param name="contents">想要出現在對話系統的對話內容，需使用字串陣列</param>
-    private IEnumerator TypeEffect(string[] contents)
+    private IEnumerator TypeEffect(string[] contents, string name = "")
     {
         // 更換名稱快捷鍵 Ctrl + R R
         // 測試用
         // string test1 = "哈囉，你好~";
         // string test2 = "對話第二段~";
         // string[] contents = { test1, test2 };
+        textName.text = name;
 
         goDialogue.SetActive(true);                         // 顯示對話物件
 
@@ -64,9 +66,9 @@ public class DialogueSystem : MonoBehaviour
     /// 開始對話
     /// </summary>
     /// <param name="contents">要顯示打字效果的對話內容</param>
-    public void StartDialogue(string[] contents)
+    public void StartDialogue(string[] contents, string name = "")
     {
-        StartCoroutine(TypeEffect(contents));
+        StartCoroutine(TypeEffect(contents, name));
     }
 
     /// <summary>
